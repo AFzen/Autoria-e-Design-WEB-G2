@@ -7,6 +7,9 @@ footer{
     margin: auto;
   }
 }
+.carousel-control-next, .carousel-control-prev {
+  width: 5%!important;
+}
 #logo{
   height: 100px;
 }
