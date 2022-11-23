@@ -20,6 +20,12 @@
     #btn_teclado {
       padding-bottom: 2em;
     }
+    .card{
+      margin-bottom: 2em;
+    }
+    .blue{
+      color: #0d6efd;
+    }
   </style>
 </head>
 <body>
@@ -84,12 +90,14 @@
   <!-- Cards -->
   <div class="container carousel-dark justify-content-center">
     <div class="row col-md-12">
-      <!--Card Notebook-->
+
+      <!--Card Notebook 1-->
       <div class="col-md gy-3">
-        <div class="card centro" style="width: 18rem;">
+        <div class="card centro" style="width: 18rem; height: 35rem;">
           <div class="card-img-top" alt="notebook">
             <div id="card1" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner" style="height:14rem; padding-top:1rem; padding-right:1rem; padding-left:1rem">
+                <!-- ALTERAR IMAGENS DO CARD (POR PADRÃO, COLOCAR 3) -->
                 <div class="carousel-item active">
                   <img src="./imagens/produtos/notebooks/3520_1.avif" class="d-block w-100" alt="...">
                 </div>
@@ -100,44 +108,55 @@
                   <img src="./imagens/produtos/notebooks/3520_3.avif" class="d-block w-100" alt="...">
                 </div>
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+              <button class="carousel-control-prev" type="button" data-bs-target="#card1" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+              <button class="carousel-control-next" type="button" data-bs-target="#card1" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
           </div>
-          <div class="card-body">
+          <!-- TITULO DO CARD -->
+          <div class="card-header">
             <h5 class="card-title">Notebook Vostro 3520</h5>
+            <br>
+          </div>
+          <!-- ESPECIFICAÇÕES CARDS -->
+          <div class="card-body">
+            <h3 class="card-title blue">R$ 5.699,99</h3>
             <p class="card-text">
               <b><li>Especificações</li></b>
               <li>Core™ i7-1255U</li>
               <li>Windows 11 Pro</li>
               <li>NVIDIA® GeForce® MX550</li>
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <!-- FOOTER CARDS (BOTÃO) -->
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Saiba mais</a>
           </div>
         </div>
       </div>
-      <!--Card Headset-->
+
+      <!--Card Headset 1-->
       <div class="col-md gy-3">
-        <div class="card centro" style="width: 18rem;">
+        <div class="card centro" style="width: 18rem; height: 35rem;">
           <div class="card-img-top" alt="notebook">
             <div id="card2" class="carousel slide" data-bs-ride="carousel">
               <div class="carousel-inner" style="height:14rem; padding-top:1rem; padding-right:1rem; padding-left:1rem">
                 <div class="carousel-item active">
-                  <img src="./imagens/produtos/perifericos/fone_hyper_1.webp" class="d-block w-100" alt="..." style="height: 14em; width: 14em">
+                  <img src="./imagens/produtos/perifericos/fone_hyper_1.jpg" class="d-block w-100" alt="..." style="height: 13em; width: 8em;">
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagens/produtos/perifericos/fone_hyper_2.webp" class="d-block w-100" alt="..." style="height: 14em; width: 14em">
+                  <img src="./imagens/produtos/perifericos/fone_hyper_2.jpg" class="d-block w-100" alt="..." style="height: 13em; width: 8em;">
                 </div>
                 <div class="carousel-item">
-                  <img src="./imagens/produtos/perifericos/fone_hyper_3.webp" class="d-block w-100" alt="..." style="height: 14em; width: 14em">
+                  <img src="./imagens/produtos/perifericos/fone_hyper_3.jpg" class="d-block w-100" alt="..." style="height: 13em; width: 10em;">
                 </div>
               </div>
+              <!-- AJUSTAR # DO DATA-BS-TARGET DE ACORDO COM O ID DO CARD -->
               <button class="carousel-control-prev" type="button" data-bs-target="#card2" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
@@ -148,39 +167,223 @@
               </button>
             </div>
           </div>
-          <div class="card-body">
+          <!-- TITULO DO CARD -->
+          <div class="card-header">
             <h5 class="card-title">Headset Gamer HyperX Cloud Stinger</h5>
+          </div>
+          <!-- ESPECIFICAÇÕES CARDS -->
+          <div class="card-body">
+            <h3 class="card-title blue">R$ 170,00</h3>
             <p class="card-text">
               <b><li>Especificações</li></b>
               <li>Drivers 50mm</li>
               <li>Múltiplas Plataformas</li>
               <li>P2 e P3 - HX-HSCS-BK/NA</li>
             </p>
-            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+          <!-- FOOTER CARDS (BOTÃO) -->
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Saiba Mais</a>
           </div>
         </div>
       </div>
+
+      <!--Card Teclado 1-->
       <div class="col-md gy-3">
-        <div class="card centro" style="width: 18rem;">
-          <img src="ntbk1.avif" class="card-img-top" alt="notebook">
+        <div class="card centro" style="width: 18rem; height: 35rem;">
+          <div class="card-img-top" alt="notebook">
+            <div id="card3" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" style="height:14rem; padding-top:1rem; padding-right:1rem; padding-left:1rem">
+                <!-- ALTERAR IMAGENS DO CARD (POR PADRÃO, COLOCAR 3) -->
+                <div class="carousel-item active">
+                  <img src="./imagens/produtos/perifericos/teclado_hyper_1.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/produtos/perifericos/teclado_hyper_2.webp" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/produtos/perifericos/teclado_hyper_3.webp" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#card3" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#card3" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <!-- TITULO DO CARD -->
+          <div class="card-header">
+            <h5 class="card-title">Teclado Mecânico Gamer HyperX Alloy Origins</h5>
+          </div>
+          <!-- ESPECIFICAÇÕES CARDS -->
           <div class="card-body">
-            <h5 class="card-title">Notebook Vostro 3520</h5>
+            <h3 class="card-title blue">R$ 450,00</h3>
             <p class="card-text">
               <b><li>Especificações</li></b>
-              <li>Mecânico - HyperX Blue</li>
-              <li>Cabo USB Tipo C para USB Tipo Aes</li>
-              <li>Iluminação RGB2 por tecla</li>
+              <li>HyperX Red Switch</li>
+              <li>Layout: ABNT2</li>
+              <li>USB tipo C para USB tipo A</li>
             </p>
+          </div>
+          <!-- FOOTER CARDS (BOTÃO) -->
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+
+      <!--Card Notebook 2-->
+      <div class="col-md gy-3">
+        <div class="card centro" style="width: 18rem; height: 35rem;">
+          <div class="card-img-top" alt="notebook">
+            <div id="card4" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" style="height:14rem; padding-top:1rem; padding-right:1rem; padding-left:1rem">
+                <div class="carousel-item active">
+                  <img src="./imagens/produtos/notebooks/nitro_1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/produtos/notebooks/nitro_2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/produtos/notebooks/nitro_3.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <!-- AJUSTAR # DO DATA-BS-TARGET DE ACORDO COM O ID DO CARD -->
+              <button class="carousel-control-prev" type="button" data-bs-target="#card4" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#card4" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <!-- TITULO DO CARD -->
+          <div class="card-header">
+            <h5 class="card-title">Notebook ACER Nitro 5</h5>
+            <br>
+          </div>
+          <!-- ESPECIFICAÇÕES CARDS -->
+          <div class="card-body">
+            <h3 class="card-title blue">R$ 4.200,00</h3>
+            <p class="card-text">
+              <b><li>Especificações</li></b>
+              <li>Processador Intel Core i5-10300H</li>
+              <li>Tela de 15,6” Full HD</li>
+              <li>NVIDIA GeForce GTX 1650</li>
+            </p>
+          </div>
+          <!-- FOOTER CARDS (BOTÃO) -->
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+      
+      <!--Card Teclado 2-->
+      <div class="col-md gy-3">
+        <div class="card centro" style="width: 18rem; height: 35rem;">
+          <div class="card-img-top" alt="notebook">
+            <div id="card5" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" style="height:14rem; padding-top:1rem; padding-right:1rem; padding-left:1rem">
+                <div class="carousel-item active">
+                  <img src="./imagens/produtos/perifericos/teclado_redragon_1.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/produtos/perifericos/teclado_redragon_2.jpg" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/produtos/perifericos/teclado_redragon_3.jpg" class="d-block w-100" alt="...">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#card5" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#card5" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <!-- TITULO DO CARD -->
+          <div class="card-header">
+            <h5 class="card-title">Teclado Redragon Lakshmi Lunar White</h5>
+          </div>
+          <!-- ESPECIFICAÇÕES CARDS -->
+          <div class="card-body">
+            <h3 class="card-title blue">R$ 250,00</h3>
+            <p class="card-text">
+              <b><li>Especificações</li></b>
+              <li>Iluminação: Rainbow</li>
+              <li>Switches: Mk.II DIY Blue</li>
+              <li>Acionamento: Mecânico</li>
+            </p>
+          </div>
+          <!-- FOOTER CARDS (BOTÃO) -->
+          <div class="card-footer">
+            <a href="#" class="btn btn-primary">Saiba Mais</a>
+          </div>
+        </div>
+      </div>
+
+      <!--Card Headset 2-->
+      <div class="col-md gy-3">
+        <div class="card centro" style="width: 18rem; height: 35rem;">
+          <div class="card-img-top" alt="notebook">
+            <div id="card6" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner" style="height:14rem; padding-top:1rem; padding-right:1rem; padding-left:1rem">
+                <div class="carousel-item active">
+                  <img src="./imagens/produtos/perifericos/fone_razer_1.jpg" class="d-block" alt="..." style="padding-left:4em; height: 13em; width: 11em;">
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/produtos/perifericos/fone_razer_2.jpg" class="d-block" alt="..." style="padding-left: 4em; height: 13em; width: 13em;">
+                </div>
+                <div class="carousel-item">
+                  <img src="./imagens/produtos/perifericos/fone_razer_3.jpg" class="d-block" alt="..." style="padding-left: 4em; height: 12em; width: 11em; text-align: center;">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#card6" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#card6" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+          <!-- TITULO DO CARD -->
+          <div class="card-header">
+            <h5 class="card-title">Headset Razer Nari Ultimate Wireless</h5>
+          </div>
+          <!-- ESPECIFICAÇÕES CARDS -->
+          <div class="card-body">
+            <h3 class="card-title blue">R$ 999,99</h3>
+            <p class="card-text">
+              <b><li>Especificações</li></b>
+              <li>Áudio Espacial THX</li>
+              <li>Drivers: 50 mm</li>
+              <li>Transceptor USB sem fio</li>
+            </p>
+          </div>
+          <!-- FOOTER CARDS (BOTÃO) -->
+          <div class="card-footer">
             <a href="#" class="btn btn-primary">Go somewhere</a>
           </div>
         </div>
-        <!--Grid column-->
       </div>
-      <!--Grid row-->
+
+
     </section>
-    <!-- Section: Links -->
   </div>
-  <!-- Grid container -->
+
+  <!--Termina cards-->
 
   <!-- Copyright -->
   <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
