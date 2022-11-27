@@ -1,189 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Teste Page</title>
-  <!-- CSS only -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  <title>Login</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <!-- JavaScript Bundle with Popper -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  <style>
-    body {
-      background: whitesmoke;
-    }
-
-    .btn-login {
-      font-size: 0.9rem;
-      letter-spacing: 0.05rem;
-      padding: 0.75rem 1rem;
-    }
-
-    .btn-google {
-      color: white !important;
-      background-color: #ea4335;
-    }
-
-    .btn-google:hover {
-      color: white !important;
-      background-color: #b92f22;
-    }
-
-    .btn-facebook {
-      color: white !important;
-      background-color: #3b5998;
-    }
-
-    .btn-facebook:hover {
-      color: white !important;
-      background-color: #1c356b;
-    }
-    html,body {
-	    height: 100%;
-    }
-
-    body.my-login-page {
-      background-color: #f7f9fb;
-      font-size: 14px;
-    }
-
-    .my-login-page .brand {
-      width: 90px;
-      height: 90px;
-      overflow: hidden;
-      border-radius: 50%;
-      margin: 40px auto;
-      box-shadow: 0 4px 8px rgba(0,0,0,.05);
-      position: relative;
-      z-index: 1;
-    }
-
-    .my-login-page .brand img {
-      width: 100%;
-    }
-
-    .my-login-page .card-wrapper {
-      width: 400px;
-    }
-
-    .my-login-page .card {
-      border-color: transparent;
-      box-shadow: 0 4px 8px rgba(0,0,0,.05);
-    }
-
-    .my-login-page .card.fat {
-      padding: 10px;
-    }
-
-    .my-login-page .card .card-title {
-      margin-bottom: 30px;
-    }
-
-    .my-login-page .form-control {
-      border-width: 2.3px;
-    }
-
-    .my-login-page .form-group label {
-      width: 100%;
-    }
-
-    .my-login-page .btn.btn-block {
-      padding: 12px 10px;
-    }
-
-    .my-login-page .footer {
-      margin: 40px 0;
-      color: #888;
-      text-align: center;
-    }
-
-    @media screen and (max-width: 425px) {
-      .my-login-page .card-wrapper {
-        width: 90%;
-        margin: 0 auto;
-      }
-    }
-
-    @media screen and (max-width: 320px) {
-      .my-login-page .card.fat {
-        padding: 0;
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+    crossorigin="anonymous"></script>
+    <style>
+      #btncad {
+        background-color: #45936C;
+        border-color: #008037;
       }
 
-      .my-login-page .card.fat .card-body {
-        padding: 15px;
+      #btncad:hover {
+        background-color: #148d48ce;
       }
-    }
-  </style>
-    </head>
+    </style>
+</head>
 <body>
-  <section class="h-100">
-		<div class="container h-100">
-			<div class="row justify-content-md-center h-100">
-				<div class="card-wrapper">
-					<div class="brand">
-						<img src="img/logo.jpg" alt="logo">
-					</div>
-					<div class="card fat">
-						<div class="card-body">
-							<h4 class="card-title">Login</h4>
-							<form method="POST" class="my-login-validation" novalidate="">
-								<div class="form-group">
-									<label for="email">E-Mail Address</label>
-									<input id="email" type="email" class="form-control" name="email" value="" required autofocus>
-									<div class="invalid-feedback">
-										Email is invalid
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label for="password">Password
-										<a href="forgot.html" class="float-right">
-											Forgot Password?
-										</a>
-									</label>
-									<input id="password" type="password" class="form-control" name="password" required data-eye>
-								    <div class="invalid-feedback">
-								    	Password is required
-							    	</div>
-								</div>
-
-								<div class="form-group">
-									<div class="custom-checkbox custom-control">
-										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
-										<label for="remember" class="custom-control-label">Remember Me</label>
-									</div>
-								</div>
-
-								<div class="form-group m-0">
-									<button type="submit" class="btn btn-primary btn-block">
-										Login
-									</button>
-								</div>
-								<div class="mt-4 text-center">
-									Don't have an account? <a href="register.html">Create One</a>
-								</div>
-							</form>
-						</div>
-					</div>
-					<div class="footer">
-						Copyright &copy; 2017 &mdash; Your Company 
-					</div>
-				</div>
-			</div>
-		</div>
-	</section>
-  <!-- Barra de navegação
-  <nav class="navbar navbar-expand-lg bg-light gy-3">
+  <!--Barra de navegação-->
+  <nav class="navbar navbar-expand-lg gy-3" style="background-color: #F4F4F4;">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">SITE</a>
+      <a class="navbar-brand" href="#"><img src="imagens/logo.png" alt="cocomputer"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Sobre</a>
@@ -196,7 +46,7 @@
               <li><a class="dropdown-item" href="#">Todas as categorias</a></li>
               <li><hr class="dropdown-divider"></li>
               <li><a class="dropdown-item" href="#">Computadores</a></li>
-              <li><a class="dropdown-item" href="#">Preiféricos</a></li>
+              <li><a class="dropdown-item" href="#">Periféricos</a></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -209,48 +59,68 @@
       </div>
     </div>
   </nav>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
-        <div class="card border-0 shadow rounded-3 my-5">
-          <div class="card-body p-4 p-sm-5">
-            <h5 class="card-title text-center mb-5 fw-light fs-5">Sign In</h5>
-            <form>
-              <div class="form-floating mb-3">
-                <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                <label for="floatingInput">Email address</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                <label for="floatingPassword">Password</label>
-              </div>
 
-              <div class="form-check mb-3">
-                <input class="form-check-input" type="checkbox" value="" id="rememberPasswordCheck">
-                <label class="form-check-label" for="rememberPasswordCheck">
-                  Remember password
-                </label>
+  <!-- Tela de cadastro -->
+  <section class="vh-100" style="background-image: linear-gradient(#F4F4F4, #0080375e);">
+    <div class="container h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-12 col-xl-11">
+          <div class="card text-black" style="border-radius: 25px;">
+            <div class="card-body p-md-5">
+              <div class="row justify-content-center">
+                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                  <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4" style="color: #45936C;">Cadastro</p>
+
+                  <form class="mx-1 mx-md-4">
+
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" id="floatingInput" placeholder="Nome Sobrenome">
+                      <label for="floatingInput">Nome</label>
+                    </div>
+
+                    
+                    <div class="form-floating mb-3">
+                      <input type="email" class="form-control" id="floatingInput" placeholder="example@email.com">
+                      <label for="floatingInput">Email</label>
+                    </div>
+
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control" id="floatingInput" placeholder="password">
+                      <label for="floatingInput">Senha</label>
+                    </div>
+
+
+                    <div class="form-floating mb-3">
+                      <input type="password" class="form-control" id="floatingInput" placeholder="password">
+                      <label for="floatingInput">Confirmar Senha</label>
+                    </div>
+
+
+                    <div class="form-check d-flex justify-content-center mb-5">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+                      <label class="form-check-label" for="form2Example3">
+                        Eu aceito os <a href="#!">Termos de Serviço</a>
+                      </label>
+                    </div>
+
+                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                      <button type="button" class="btn btn-primary btn-lg" id="btncad">Cadastrar</button>
+                    </div>
+
+                  </form>
+
+                </div>
+                <div class="col-xs-3 col-sm-4 col-md-5 col-lg-6 col-xl-7 col-xxl- 8 d-flex align-items-center order-1 order-lg-2">
+                  <img src="imagens/cocomputer-cadastro.png" class="img-fluid" alt="Cocomputer" id="logocad">
+                </div>
               </div>
-              <div class="d-grid">
-                <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit">Sign
-                  in</button>
-              </div>
-              <hr class="my-4">
-              <div class="d-grid mb-2">
-                <button class="btn btn-google btn-login text-uppercase fw-bold" type="submit">
-                  <i class="fab fa-google me-2"></i> Sign in with Google
-                </button>
-              </div>
-              <div class="d-grid mb-2">
-                <button class="btn btn-facebook btn-login text-uppercase fw-bold" type="submit">
-                  <i class="fab fa-facebook-f me-2"></i> Sign in with Facebook
-                </button>
-              </div>
-            </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div> -->
+  </section>
 </body>
+
 </html>
