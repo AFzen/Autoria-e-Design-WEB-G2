@@ -17,7 +17,7 @@ footer{
   }
 }
 .card{
-  box-shadow: 10px 5px 5px grey;
+  box-shadow: 2px 5px 5px grey;
 }
 
 #carrinho{
@@ -31,3 +31,4 @@ footer{
 .fa{
   font-size: 25px;
 }
+

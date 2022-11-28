@@ -12,8 +12,11 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="functionPay.js" charset="utf-8"></script>
 </head>
-<body>
+<body onload="onload();">
 <!--Barra de navegação-->
 <nav class="navbar navbar-expand-lg gy-3" style="background-color: #F4F4F4;">
   <div class="container-fluid">
@@ -126,7 +129,7 @@
                     <span>Valor</span>
                   </div>
                   <div class="mt-1">
-                    <sup class="super-price">R$ 17.649,98</sup>
+                    <span class="super-price" id="txt_total">R$ 17.649,98</span>
                   </div>
                 </div>
                 <hr class="mt-0 line">
@@ -145,10 +148,10 @@
                   <div class="d-flex flex-column">
                     <span><b>Total</b></span>             
                   </div>
-                  <span><b>R$ 17.649,98</b></span>
+                  <span class="super-price" id="txt_total2">R$ 17.649,98</span>
                 </div>
                 <div class="p-3">
-                <button class="btn btn-success btn-block free-button">Finalizar Compra</button> 
+                <button class="btn btn-success btn-block free-button" onclick="alert('Compra Finalizada com Sucesso!');"><a class="nav-link" href="./index.html"> Finalizar Compra </a></button> 
                 </div>    
               </div>
           </div>
