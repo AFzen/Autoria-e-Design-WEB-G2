@@ -11,6 +11,11 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
   <!-- JavaScript Bundle with Popper -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="function.js" charset="utf-8"></script>
+  <script type="text/javascript" src="funcaoCart.js" charset="utf-8"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+ 	
 	<style>
 		.color-green {
 			color: #008037;
@@ -18,7 +23,7 @@
 	</style>
 </head>
 
-<body>
+<body onload="onload();">
 	
 	  <!--Barra de navegação-->
 		<nav class="navbar navbar-expand-lg gy-3" style="background-color: #f4f4f4;">
@@ -40,10 +45,11 @@
 								Categorias
 							</a>
 							<ul class="dropdown-menu">
-								<li><a class="dropdown-item" href="#">Todas as categorias</a></li>
+								<li><a class="dropdown-item" href="#" id="todos" onclick="chamada(this.id);">Todas as categorias</a></li>
 								<li><hr class="dropdown-divider"></li>
-								<li><a class="dropdown-item" href="#">Computadores</a></li>
-								<li><a class="dropdown-item" href="#">Periféricos</a></li>
+								<li><a class="dropdown-item" href="#" id="comp" onclick="chamada(this.id);">Computadores</a></li>
+								<li><a class="dropdown-item" href="#" id="tecl" onclick="chamada(this.id);">Teclados</a></li>
+								<li><a class="dropdown-item" href="#" id="head" onclick="chamada(this.id);">Headset</a></li>
 							</ul>
 						</li>
 						<li class="nav-item">
@@ -59,14 +65,14 @@
 
 	<section class="vh-100" style="background-image: linear-gradient(#F4F4F4, #0080375e);">
 		<div class="container h-100 py-5">
-			<div class="row d-flex justify-content-center align-items-center h-100">
+			<div class="row d-flex justify-content-center align-items-center">
 				<div class="col-10">
 	
 					<div class="d-flex justify-content-between align-items-center mb-4">
 						<h1 class="fw-normal mb-0">Carrinho de compras</h1>
 					</div>
 	
-					<div class="card rounded-3 mb-4">
+					<div class="card rounded-3 mb-4" id="div_pc">
 						<div class="card-body p-4">
 							<div class="row d-flex justify-content-between align-items-center">
 								<div class="col-md-2 col-lg-2 col-xl-2">
@@ -83,8 +89,8 @@
 										<i class="fas fa-minus"></i>
 									</button>
 	
-									<input id="form1" min="0" name="quantity" value="2" type="number"
-										class="form-control form-control-sm" />
+									<input id="txt_comp" min="0" name="quantity" type="number"
+										class="form-control form-control-sm" onchange="calculo();"/>
 	
 									<button class="btn btn-link px-2"
 										onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
@@ -101,7 +107,7 @@
 						</div>
 					</div>
 	
-					<div class="card rounded-3 mb-4">
+					<div class="card rounded-3 mb-4" id="div_teclado">
 						<div class="card-body p-4">
 							<div class="row d-flex justify-content-between align-items-center">
 								<div class="col-md-2 col-lg-2 col-xl-2">
@@ -119,8 +125,8 @@
 										<i class="fas fa-minus"></i>
 									</button>
 	
-									<input id="form1" min="0" name="quantity" value="2" type="number"
-										class="form-control form-control-sm" />
+									<input id="txt_tecl" min="0" name="quantity" type="number"
+										class="form-control form-control-sm" onchange="calculo();"/>
 	
 									<button class="btn btn-link px-2"
 										onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
@@ -137,7 +143,7 @@
 						</div>
 					</div>
 	
-					<div class="card rounded-3 mb-4">
+					<div class="card rounded-3 mb-4" id="div_r7">
 						<div class="card-body p-4">
 							<div class="row d-flex justify-content-between align-items-center">
 								<div class="col-md-2 col-lg-2 col-xl-2">
@@ -154,8 +160,8 @@
 										<i class="fas fa-minus"></i>
 									</button>
 	
-									<input id="form1" min="0" name="quantity" value="2" type="number"
-										class="form-control form-control-sm" />
+									<input id="txt_head" min="0" name="quantity" type="number"
+										class="form-control form-control-sm" onchange="calculo();"/>
 	
 									<button class="btn btn-link px-2"
 										onclick="this.parentNode.querySelector('input[type=number]').stepUp()">
@@ -172,19 +178,9 @@
 						</div>
 					</div>
 	
-					<div class="card mb-4">
-						<div class="card-body p-4 d-flex flex-row">
-							<div class="form-outline flex-fill">
-								<input type="text" id="form1" class="form-control form-control-lg" />
-								<label class="form-label" for="form1">Cupom de Desconto</label>
-							</div>
-							<button type="button" class="btn btn-success btn-lg ms-3">Aplicar</button>
-						</div>
-					</div>
-	
 					<div class="card">
 						<div class="card-body">
-							<a href="payment.html"><button type="button" class="btn btn-success btn-block btn-lg">Prosseguir para Pagamento</button></a>
+							<a href="payment.html" target="_blank"><button type="button" class="btn btn-success btn-block btn-lg">Prosseguir para Pagamento</button></a>
 						</div>
 					</div>
 	
