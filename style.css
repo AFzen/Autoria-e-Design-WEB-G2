@@ -6,7 +6,11 @@ footer{
   .centro {
     margin: auto;
   }
+  #carrinho{
+    left: 85%!important;
+  }
 }
+
 #logo{
   height: 100px;
 }
@@ -23,8 +27,8 @@ footer{
 #carrinho{
   position: fixed;
   left: 95%;
-  bottom: 5%;
-  background-color: greenyellow;
+  bottom: 10%;
+  background-color: #008037;
   padding: 20px;
   border-radius: 50%;
 }
